@@ -4,9 +4,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
-
 project_name = "mlProject"
-
 
 list_of_files = [
     ".github/workflows/.gitkeep",
@@ -31,8 +29,6 @@ list_of_files = [
     "research/trials.ipynb",
     "templates/index.html",
     "test.py"
-
-
 ]
 
 
