@@ -4,7 +4,8 @@ import pandas as pd
 class dataTransformationInitiatorClass():
     def __init__(self):
         self.data_TransformationObj = data_TransformationClass()
-        
+        self.cleaned_DataFile_Path = "artifacts/cleanedDataFile.csv"
+
     def dataTransformationInitiatorMethod(self):
         listOfColumns = ['RowNumber', 'Loan_ID', 'CustomerId','Surname','Credit_History']
         print("-------------------------------------------------------")
@@ -24,11 +25,6 @@ class dataTransformationInitiatorClass():
         df = self.data_TransformationObj.replaceWithMean(columnName1,df)
         df = self.data_TransformationObj.removeOutlier(colName='ApplicantIncome',df=df,LowerQuantile=.20,HigherQuantile=.80)
         df = self.data_TransformationObj.removeOutlier(colName='NumOfProducts',df=df,LowerQuantile=.10,HigherQuantile=.90)
-        X_train, X_test, y_train, y_test = self.data_TransformationObj.dataReadingAndSplitting(df)
         
-        transformationOfData = self.data_TransformationObj.dataTransformation()
+        df.to_csv(self.cleaned_DataFile_Path, index=False)  # Save as CSV without index
         
-        X_train =transformationOfData.fit_transform(X_train)
-        X_test = transformationOfData.transform(X_test)
-        
-        print(pd.DataFrame(X_train))
