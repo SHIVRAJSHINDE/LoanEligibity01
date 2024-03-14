@@ -6,6 +6,8 @@ from mlProject.ExceptionLoggerAndUtils.exception import CustomException
 from mlProject.ExceptionLoggerAndUtils.utils import save_object
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.model_selection import RandomizedSearchCV
+from sklearn.ensemble import RandomForestClassifier
+
 import warnings
 import pandas as pd
 
@@ -21,39 +23,34 @@ class ModelTrainingClass():
 
             params = {
                 "Random Forest": {
-                    'n_estimators': [10, 50, 100, 200],  # Number of trees in the forest
-                    'max_depth': [None, 10, 20, 30],   # Maximum depth of each tree
-                    'min_samples_split': [2, 5, 10],  # Minimum samples required to split a node
-                    'min_samples_leaf': [1, 2, 4],    # Minimum samples required in a leaf node
-                    'max_features': ['auto', 'sqrt', 'log2'],  # Number of features to consider
-                },
-
+                    'n_estimators': [10, 50, 100, 200],         # Number of trees in the forest
+                    'max_depth': [None, 10, 20, 30],            # Maximum depth of each tree
+                    'min_samples_split': [2, 5, 10],            # Minimum samples required to split a node
+                    'min_samples_leaf': [1, 2, 4],              # Minimum samples required in a leaf node
+                    'max_features': ['auto', 'sqrt', 'log2'],   # Number of features to consider
+                }
             }
 
             return models, params
         except Exception as e:
             raise CustomException(e, sys)
 
-    def model_training_method(self, model_report, models):
+    def train_svc(self,X_train, y_train, C=1.0, kernel='rbf', degree=3, gamma='scale'):
         try:
-            print('-------------------------model_report-------------------------')
-            print(models)
-            print(model_report)
-            print(max(model_report['Accuracy']))
-            print(model_report.keys())
-            best_model_name = model_report['modelName'][0]
-            best_model = models[best_model_name]
-
-            print("Best model on both training and testing dataset:")
-            print(best_model)
+            # Initialize the SVC classifier with specified parameters
+            svc_classifier = SVC(C=C, kernel=kernel, degree=degree, gamma=gamma)
+            
+            # Train the SVC classifier
+            svc_classifier.fit(X_train, y_train)
 
             save_object(
                 file_path=self.trained_model_file_path,
-                obj=best_model
+                obj=svc_classifier
             )
 
         except Exception as e:
             raise CustomException(e, sys)
+        
 
     def evaluate_classification_models(self, X_train, y_train, X_test, y_test, models, param):
         try:
@@ -88,3 +85,5 @@ class ModelTrainingClass():
 
         except Exception as e:
             raise CustomException(e, sys)
+        
+        

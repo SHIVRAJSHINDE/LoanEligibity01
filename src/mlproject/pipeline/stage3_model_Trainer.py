@@ -23,7 +23,7 @@ class trainingInitiatorClass():
 
             X_train =transformationOfData.fit_transform(X_train)
             X_test = transformationOfData.transform(X_test)
-            
+            print(X_train)
             save_object(
             file_path= self.transformationFilePath,
             obj = transformationOfData
@@ -34,7 +34,10 @@ class trainingInitiatorClass():
             model_report: dict = self.modelTrainingClassObj.evaluate_classification_models(
                 X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test,models=models, param=parameters)
 
-            self.modelTrainingClassObj.model_training_method(model_report,models)
+
+
+            self.modelTrainingClassObj.train_svc(X_train, y_train, C=0.5, kernel='linear')
+            #self.modelTrainingClassObj.model_training_method(model_report,models)
 
 
 

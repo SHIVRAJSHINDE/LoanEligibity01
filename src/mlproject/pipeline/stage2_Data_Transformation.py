@@ -1,5 +1,8 @@
+
+
 from mlProject.components.data_Transformation import data_TransformationClass
 import pandas as pd
+
 
 class dataTransformationInitiatorClass():
     def __init__(self):
@@ -27,4 +30,4 @@ class dataTransformationInitiatorClass():
         df = self.data_TransformationObj.removeOutlier(colName='NumOfProducts',df=df,LowerQuantile=.10,HigherQuantile=.90)
         
         df.to_csv(self.cleaned_DataFile_Path, index=False)  # Save as CSV without index
-        
+        print(df)
