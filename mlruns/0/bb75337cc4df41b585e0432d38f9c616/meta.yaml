@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/bb75337cc4df41b585e0432d38f9c616/artifacts
+deleted_time: 1710413674579
+end_time: 1710412665198
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: bb75337cc4df41b585e0432d38f9c616
+run_name: sassy-elk-667
+run_uuid: bb75337cc4df41b585e0432d38f9c616
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710412662358
+status: 4
+tags: []
+user_id: shind

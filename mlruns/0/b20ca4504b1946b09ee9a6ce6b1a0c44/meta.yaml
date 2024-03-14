@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/b20ca4504b1946b09ee9a6ce6b1a0c44/artifacts
+deleted_time: 1710413674580
+end_time: 1710412931327
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: b20ca4504b1946b09ee9a6ce6b1a0c44
+run_name: placid-finch-558
+run_uuid: b20ca4504b1946b09ee9a6ce6b1a0c44
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710412928608
+status: 4
+tags: []
+user_id: shind

@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/daf6c3f302e741ab84d72586464908bd/artifacts
+deleted_time: 1710423103238
+end_time: 1710419062820
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: daf6c3f302e741ab84d72586464908bd
+run_name: sincere-hound-405
+run_uuid: daf6c3f302e741ab84d72586464908bd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710419060518
+status: 3
+tags: []
+user_id: shind

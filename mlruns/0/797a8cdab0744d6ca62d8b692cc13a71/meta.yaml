@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/797a8cdab0744d6ca62d8b692cc13a71/artifacts
+deleted_time: 1710423103235
+end_time: 1710422860881
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 797a8cdab0744d6ca62d8b692cc13a71
+run_name: sincere-whale-242
+run_uuid: 797a8cdab0744d6ca62d8b692cc13a71
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710422858470
+status: 4
+tags: []
+user_id: shind

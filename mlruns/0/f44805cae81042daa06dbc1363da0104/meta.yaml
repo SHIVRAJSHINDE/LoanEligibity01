@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/f44805cae81042daa06dbc1363da0104/artifacts
+deleted_time: 1710418328978
+end_time: 1710414406812
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: f44805cae81042daa06dbc1363da0104
+run_name: capable-gnat-531
+run_uuid: f44805cae81042daa06dbc1363da0104
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710414375309
+status: 3
+tags: []
+user_id: shind

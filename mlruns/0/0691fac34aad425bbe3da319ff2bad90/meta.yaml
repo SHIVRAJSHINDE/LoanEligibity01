@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/0691fac34aad425bbe3da319ff2bad90/artifacts
+deleted_time: 1710418329074
+end_time: 1710414008343
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 0691fac34aad425bbe3da319ff2bad90
+run_name: brawny-lamb-761
+run_uuid: 0691fac34aad425bbe3da319ff2bad90
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710413952752
+status: 3
+tags: []
+user_id: shind

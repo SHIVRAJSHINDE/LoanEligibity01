@@ -29,17 +29,15 @@ class trainingInitiatorClass():
             obj = transformationOfData
             )
 
-            models, parameters = self.modelTrainingClassObj.models_to_train_and_parameters()
+            'models, parameters = self.modelTrainingClassObj.models_to_train_and_parameters()'
 
-            model_report: dict = self.modelTrainingClassObj.evaluate_classification_models(
-                X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test,models=models, param=parameters)
+            '''            model_report: dict = self.modelTrainingClassObj.evaluate_classification_models(
+                            X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test,models=models, param=parameters)
+            '''
 
-
-
-            self.modelTrainingClassObj.train_svc(X_train, y_train, C=0.5, kernel='linear')
+            self.modelTrainingClassObj.train_svc(X_train, X_test, y_train, y_test, C=0.5, kernel='linear')
+            #self.modelTrainingClassObj.evaluate_classification_models(X_test=X_test, y_test=y_test)
             #self.modelTrainingClassObj.model_training_method(model_report,models)
-
-
 
             print(pd.DataFrame(X_train))
 

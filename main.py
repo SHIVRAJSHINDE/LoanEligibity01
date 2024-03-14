@@ -9,23 +9,6 @@ from mlProject.pipeline.stage3_model_Trainer import trainingInitiatorClass
 STAGE_NAME = "Data Ingestion stage"
 
 
-try:
-   
-   data_ingestion = dataIngestionPipeline()
-   data_ingestion.dataIngestionMethod()
-   
-except Exception as e:
-    raise CustomException(e,sys)
-
-try:
-   
-   dataTransformationInitiator = dataTransformationInitiatorClass()
-   dataTransformationInitiator.dataTransformationInitiatorMethod()
-   
-except Exception as e:
-    raise CustomException(e,sys)
- 
- 
  
 try:
 
